@@ -1,0 +1,19 @@
+
+spring:
+  application:
+    name: redis
+  datasource:
+    url: jdbc:mysql://localhost:3306/redis?createDatabaseIfNotExist=true
+    username: root
+    password: Saurabh@645
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    redis:
+      port: 6379
+      host: localhost
+
+server:
+  port: 8083
