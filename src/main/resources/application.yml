@@ -1,11 +1,12 @@
-
+server:
+  port: 8082
 spring:
   application:
     name: redis
   datasource:
-    url: jdbc:mysql://localhost:3306/redis?createDatabaseIfNotExist=true
-    username: root
-    password: Saurabh@645
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/redis?createDatabaseIfNotExist=true}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:Saurabh@645}
   jpa:
     hibernate:
       ddl-auto: update
@@ -15,5 +16,4 @@ spring:
       port: 6379
       host: localhost
 
-server:
-  port: 8083
+
